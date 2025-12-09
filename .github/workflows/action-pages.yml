@@ -94,7 +94,7 @@ jobs:
   # Build job
   build:
     needs: [check-pages, determine_env]
-    if: needs.check-pages.outputs.pages_enabled == 'true'
+    if: needs.check-pages.outputs.pages_enabled == 'true' || github.event_name == 'workflow_dispatch'
     concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
 
