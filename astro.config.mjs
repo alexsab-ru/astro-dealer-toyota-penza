@@ -87,6 +87,11 @@ export default defineConfig({
 		icon(),
 		react(),
 	],
+	redirects: {
+		"/special-offers-list": "/special-offers",
+		"/special-offers-list/specialnoe-predlozhenie-na-kuzovnoy-remont": "/special-offers/specialnoe-predlozhenie-na-kuzovnoy-remont",
+		"/special-offers-list/vash-optimalnyy-vybor": "/special-offers/vash-optimalnyy-vybor"
+	},
 	vite: {
 		plugins: [
 			yaml(),
