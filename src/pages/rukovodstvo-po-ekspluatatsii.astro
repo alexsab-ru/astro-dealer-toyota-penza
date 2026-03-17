@@ -9,10 +9,9 @@ import Button from '@/components/Button/Button.astro';
 const { brand, legal_city_where } = settings;
 const { models } = modelsData;
 const files = {
-	'camry': 'https://cdn.alexsab.ru/manuals/toyota/stavropol/manual-toyota-camry.pdf',
-	'land-cruiser-prado': 'https://cdn.alexsab.ru/manuals/toyota/stavropol/manual-toyota-land-cruiser-prado.pdf',
-	'highlander': 'https://cdn.alexsab.ru/manuals/toyota/stavropol/manual-toyota-highlander.pdf',
-	'rav4': 'https://cdn.alexsab.ru/manuals/toyota/stavropol/manual-toyota-rav4.pdf',
+	'camry': 'https://cdn.alexsab.ru/manuals/toyota/penza/manual-toyota-camry.pdf',
+	'avalon': 'https://cdn.alexsab.ru/manuals/toyota/penza/manual-toyota-avalon.pdf',
+	'rav4': 'https://cdn.alexsab.ru/manuals/toyota/penza/manual-toyota-rav4.pdf',
 }
 ---
 
@@ -25,10 +24,10 @@ const files = {
 				<CardMedia imgPlacement={idx % 2 === 0 ? 'left' : 'right'}>
 					<img slot="card-image" class="max-w-48 lg:p-10" src={model.thumb} alt={model.name} />
 					<Fragment slot="card-content">
-						<h2 class="!m-0 !p-0 before:hidden !text-xl lg:!text-3xl">Руководство по эксплуатации <span class="font-semibold">{model.name}</span></h2>
+						<h2 class="m-0! p-0! before:hidden text-xl! lg:text-3xl!">Руководство по эксплуатации <span class="font-semibold">{model.name}</span></h2>
 							<div class="flex gap-3">
-								<Button view="link" classes="!m-0 btn" url={files[model.id]} target="_blank" title="Посмотреть" />
-								<Button view="link" classes="!m-0 btn btn-o" url={files[model.id]} download title="Скачать"/>
+								<Button view="link" classes="m-0! btn" url={files[model.id]} target="_blank" title="Посмотреть" />
+								<Button view="link" classes="m-0! btn btn-o" url={files[model.id]} download title="Скачать"/>
 							</div>
 					</Fragment>
 				</CardMedia>
