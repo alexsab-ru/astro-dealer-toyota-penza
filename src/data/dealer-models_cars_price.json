@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "brand": "Toyota",
+    "model": "Highlander",
+    "price": 6300000,
+    "benefit": 0
+  }
+]
